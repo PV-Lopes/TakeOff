@@ -1,4 +1,4 @@
-# 🧠 Desafio de Prompt Engineering com ChatGPT
+# Desafio de Prompt Engineering com ChatGPT
 
 Este documento apresenta a resolução do **Desafio de Prompt Engineering**.
 ---
