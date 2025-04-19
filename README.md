@@ -42,8 +42,6 @@ plaintext
 142.981 = 100.000 + 40.000 + 2.000 + 900 + 80 + 1
 I - Iteração (Exemplo adicional):
 plaintext
-Copiar
-Editar
 85.673 = 80.000 + 5.000 + 600 + 70 + 3
 
 ---
@@ -57,19 +55,19 @@ Editar
 
 **Resposta da IA:**
 
-Petyr Baelish (Mindinho)
+*Petyr Baelish (Mindinho)*
 Mestre da manipulação e das intrigas.
 
 Usa o caos como escada para o poder.
 
-Representa o maquiavelismo clássico: o fim justifica os meios.
+**Representa o maquiavelismo clássico: o fim justifica os meios.**
 
-Cersei Lannister
+*Cersei Lannister*
 Usa o medo e o controle para manter o poder.
 
-Exemplo: Explosão do Septo de Baelor para eliminar adversários.
+**Exemplo: Explosão do Septo de Baelor para eliminar adversários.**
 
-Tyrion Lannister
+*Tyrion Lannister*
 Inteligente e estrategista.
 
 Pragmático ao lidar com alianças e traições.
@@ -101,32 +99,30 @@ Age de forma maquiavélica para sobreviver e influenciar.
 
 **Resposta da IA (código):**
 
-python
-Copiar
-Editar
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field, validator
-from uuid import uuid4
-from datetime import date
 
-app = FastAPI()
+    from fastapi import FastAPI, HTTPException
+    from pydantic import BaseModel, Field, validator
+    from uuid import uuid4
+    from datetime import date
 
-class Item(BaseModel):
+    app = FastAPI()
+
+    class Item(BaseModel):
     nome: str = Field(..., max_length=25)
     valor: float
     data: date
 
-    @validator("data")
-    def validar_data(cls, v):
-        if v > date.today():
-            raise ValueError("A data não pode ser superior à data atual.")
-        return v
+        @validator("data")
+        def validar_data(cls, v):
+            if v > date.today():
+                raise ValueError("A data não pode ser superior à data atual.")
+            return v
 
-@app.post("/item")
-def processar_item(item: Item):
-    return {
-        "nome": item.nome,
-        "valor": item.valor,
-        "data": item.data,
-        "uuid": str(uuid4())
+    @app.post("/item")
+    def processar_item(item: Item):
+        return {
+            "nome": item.nome,
+            "valor": item.valor,
+            "data": item.data,
+            "uuid": str(uuid4())
     }
