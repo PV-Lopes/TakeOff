@@ -85,10 +85,9 @@ Age de forma maquiavélica para sobreviver e influenciar.
 
 > Crie um endpoint usando FastAPI em Python que aceite um objeto do tipo Item com os seguintes campos:
 
- nome: string, máximo de 25 caracteres.
+> nome: string, máximo de 25 caracteres.
 
-valor: float
-
+> valor: float
 data: do tipo date, não pode ser superior à data atual.
 
 O endpoint deve:
@@ -99,7 +98,7 @@ Retornar o corpo da requisição junto com um campo adicional chamado uuid, cont
 
 Forneça o código completo, incluindo os imports necessários.
 
-** Resposta da IA (código):**
+**Resposta da IA (código):**
 
 python
 Copiar
