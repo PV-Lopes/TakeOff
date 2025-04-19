@@ -50,8 +50,8 @@ Editar
 
 ## Questão 3: Personagens maquiavélicos em As Crônicas de Gelo e Fogo
 
-** Técnica Utilizada:** Few-Shot + Contextualização Filosófica
-** Prompt Utilizado:**
+**Técnica Utilizada:** Few-Shot + Contextualização Filosófica
+**Prompt Utilizado:**
 
 > Quais personagens de "As Crônicas de Gelo e Fogo" possuem traços inspirados nos ensinamentos de Nicolau Maquiavel? Considere princípios da obra "O Príncipe", como o uso da astúcia, da manipulação política, do pragmatismo e da busca pelo poder a qualquer custo. Exemplifique com 2 a 3 personagens, como Petyr Baelish, Cersei Lannister ou Tyrion, e explique como cada um aplica conceitos maquiavélicos.
 
@@ -80,17 +80,24 @@ Age de forma maquiavélica para sobreviver e influenciar.
 
 ## Questão 4: Endpoint FastAPI com validação e UUID
 
-** Técnica Utilizada:** Zero-Shot + Prompt técnico estruturado
-** Prompt Utilizado:**
+**Técnica Utilizada:** Zero-Shot + Prompt técnico estruturado
+**Prompt Utilizado:**
 
 > Crie um endpoint usando FastAPI em Python que aceite um objeto do tipo Item com os seguintes campos:
+
 > nome: string, máximo de 25 caracteres.
-valor: float
-data: do tipo date, não pode ser superior à data atual.
-O endpoint deve:
-Validar os campos recebidos conforme os requisitos acima.
-Retornar o corpo da requisição junto com um campo adicional chamado uuid, contendo um identificador único gerado dinamicamente.
-Forneça o código completo, incluindo os imports necessários.
+
+> valor: float
+
+> data: do tipo date, não pode ser superior à data atual.
+
+> O endpoint deve:
+
+> Validar os campos recebidos conforme os requisitos acima.
+
+> Retornar o corpo da requisição junto com um campo adicional chamado uuid, contendo um identificador único gerado dinamicamente.
+
+> Forneça o código completo, incluindo os imports necessários.
 
 **Resposta da IA (código):**
 
